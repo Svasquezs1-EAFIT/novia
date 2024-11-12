@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo para mi novia</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            color: #ff69b4;
+        }
+
+        /* Animación de Flores */
+        .flower {
+            position: absolute;
+            top: -50px;
+            animation: fall 5s linear infinite;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Generar múltiples flores */
+        .flower:nth-child(1) { left: 0%; animation-duration: 6s; }
+        .flower:nth-child(2) { left: 10%; animation-duration: 4s; }
+        .flower:nth-child(3) { left: 20%; animation-duration: 5s; }
+        .flower:nth-child(4) { left: 30%; animation-duration: 7s; }
+        .flower:nth-child(5) { left: 40%; animation-duration: 3s; }
+        .flower:nth-child(6) { left: 50%; animation-duration: 6s; }
+        .flower:nth-child(7) { left: 60%; animation-duration: 4s; }
+        .flower:nth-child(8) { left: 70%; animation-duration: 5s; }
+        .flower:nth-child(9) { left: 80%; animation-duration: 6s; }
+        .flower:nth-child(10) { left: 90%; animation-duration: 6s; }
+        .flower:nth-child(11) { left: 100%; animation-duration: 6s; }
+
+        img{
+            width: 100px;
+            height: auto;
+        }
+
+        /* Estilo del corazón */
+        .heart {
+            position: relative;
+            width: 160px; /* Aumentar tamaño del corazón */
+            height: 160px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: pulse 1.5s infinite;
+            margin-bottom: 20px;
+        }
+ 
+        .heart::after, 
+        .heart::before {
+            content: "";
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .heart::after {
+            left: 80px;
+            top: 0;
+            z-index: -1; /* Corazón en una capa intermedia */
+        }
+        .heart::before {
+            top: -80px;
+            left: 0;
+            z-index: -1; /* Corazón en una capa intermedia */
+        }
+
+        /* Número en el centro del corazón */
+        .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            color: white;
+            font-size: 2.5em; /* Reducir tamaño */
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        /* Texto adicional */
+        .message {
+            font-size: 1.2em;
+            text-align: center;
+            max-width: 80%;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Flores que caen -->
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+    <img src="./girasol.png" alt="Flor" class="flower">
+
+    <!-- Corazón con número y mensaje -->
+    <div class="heart">
+        <div class="number">
+            <h1>11</h1>
+        </div>
+    </div>
+
+    <div class="message">
+        <h1>💖 Para mi amor, cada latido está lleno de ti 💖</h1>
+        <h1>💖 MI BOO👻 💖</h1>
+    </div>
+</body>
+</html>
